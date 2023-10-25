@@ -16,9 +16,7 @@ analytics account: Google Analytics ID
 
 ## **Introducción**
 
-<!-- ![BIOS](https://bioslighting.com/wp-content/uploads/2020/04/BIOS_Logo-Black_clean.png) -->
-
-![BIOS](img/BIOS.png)
+![BIOS](img/windows.png)
 
 **Última modificanción:** 2023-10-25
 
