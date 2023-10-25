@@ -41,6 +41,8 @@ Duration: 2:00
 ### ¿Cómo acceder?
 Lo primero que debemos hacer es buscar que tecla inicia la BIOS/UEFI de nuestro ordenador, aunque varía dependiendo del modelo de la tarjeta madre. Esto se hace usualmente presionando la tecla F2 o Supr. Presione la tecla adecuada hasta que aparezca el menú de configuración.
 
+![UEFI](img/6.JPG)
+
 ---
 
 ## **Contraseña de usuario/administrador en arranque**
@@ -49,16 +51,19 @@ Duration: 2:00
 
 Una vez dentro de la UEFI:
 
-En la mayoría de versiones de UEFI se encuentra el apartado “Seguridad”, donde se hallan las configuraciones de contraseñas. Diríjase con el mouse o el teclado hacia esta zona y presione sobre ella.
-Usualmente aparece la “Contraseña de supervisor” y “Contraseña de usuario”, ciertamente, le recomendamos utilizar la opción de usuario. Lo único que deberá hacer, es presionar doble clic o Enter sobre “Contraseña de usuario”. 
+1. Vamos al apartado “Seguridad”, aquí veremos las opciones “Contraseña de administrador y “Contraseña de usuario”. Lo único que deberemos hacer, es presionar doble clic sobre la opción que deseemos. 
 
-Al realizar lo anterior, debe escribir la contraseña y presionar Enter, se le pedirá ingresar otra vez la contraseña, hágalo y presione entrar.
+![PASS](img/1.JPG)
 
-Luego de hacer los cambios, diríjase hacia la pestaña “Salida”, opción que usualmente está al final a la derecha. Haga clic sobre la opción “Guardar cambios y salir”. Tras esto los cambios deberían guardarse y al arrancar otra vez UEFI, se pedirá la contraseña.
+2. Al realizar lo anterior, escribiremos la contraseña y presionamos Enter, se le pedirá ingresar otra vez la contraseña, hágalo y presione entrar.
 
+![PASS2](img/2.JPG)
+
+3. Luego de hacer los cambios, nos dirijimos hacia la pestaña “Salida”. Haga clic sobre la opción “Guardar cambios y salir”. Tras esto los cambios deberían guardarse y al arrancar otra vez UEFI, se pedirá la contraseña.
+
+![PASS3](img/3.JPG)
 
 ---
-
 
 ## **Arranque desde dispositivos externos**
 
@@ -69,6 +74,8 @@ Una vez dentro de la UEFI:
 1. **Navega a la configuración de arranque:** Una vez en la BIOS, busca la opción de "Boot". Puede estar en una pestaña diferente dependiendo de la versión de la BIOS.
 
 3. **Prioridad de arranque:** Busca la opción de "Boot Priority". Aquí deberías ver una lista de dispositivos de almacenamiento como disco duro, CD/DVD y USB.
+
+![BOOT](img/5.JPG)
 
 4. **Desactiva los dispositivos externos:** En la lista de dispositivos de arranque, desactiva o cambia la prioridad de los dispositivos USB o externos a un nivel más bajo. Puedes hacerlo moviendo el dispositivo de almacenamiento externo hacia abajo en la lista de prioridades.
 
