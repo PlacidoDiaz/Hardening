@@ -49,22 +49,34 @@
     
       <google-codelab-step label="Configurar una contraseña modificar el arranque" duration="2">
         <p>Para poder colocar una contraseña en el gestor de arranque debemos cifrar primero la contraseña con <strong>sudo grub-mkpasswd-pbkdf2</strong>.</p>
-<p>Ahora accedereos a <strong>/etc/grub.d/40_custom</strong>, una vez aquí dentro colocaremos lo siguiente</p>
+<p>Ahora accedereos a <strong>/etc/grub.d/40_custom</strong>, una vez aquí dentro colocaremos lo siguiente:</p>
 <pre><code>set superusers=&#34;nombre-usuario&#34;
 password_pbkdf2 nombre-usuario hash-password
 </code></pre>
-<p>Para guarda los cambios tendremos que colocar el comando <strong>update-grub</strong></p>
+<p>Para guarda los cambios tendremos que colocar el comando <strong>update-grub</strong>.</p>
+<p>Al arrancar de nuevo nos pedirá el usuario y su contraseña.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Crear una copia de seguridad de la configuración del arranque" duration="3">
-        
+      <google-codelab-step label="Crear una copia de seguridad de la configuración del arranque" duration="1">
+        <p>Para realizar una realizar una copia de seguridad de la configuración del  grub2 hay que respaldar estos tres elementos:</p>
+<ul>
+<li>Archivo /etc/default/grub</li>
+<li>Directorio /etc/grub.d/</li>
+<li>Archivo /boot/grub/grub.cfg</li>
+</ul>
+
 
       </google-codelab-step>
     
       <google-codelab-step label="Otras opciones de seguridad diferentes" duration="3">
         <p>Estas son otras formas de asegurar el arranque:</p>
+<ul>
+<li><strong>Utilizar Secure Boot:</strong> Esto ayuda a proteger el proceso de arranque y garantiza que solo el software firmado digitalmente por un fabricante de confianza se ejecute durante el arranque.</li>
+<li><strong>Restricción de arranque desde dispositivos externos:</strong> Restringir el arranque desde dispositivos externos como USB o CD/DVD. Esto previene posibles ataques que podrían comprometer GRUB a través de medios externos.</li>
+<li><strong>Configuración de permisos de archivos:</strong> Asegurar que los archivos de configuración relacionados con GRUB tengan los permisos adecuados. Restringe los permisos de lectura y escritura para los archivos de configuración de GRUB para evitar la manipulación no autorizada.</li>
+</ul>
 
 
       </google-codelab-step>

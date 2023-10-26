@@ -50,20 +50,25 @@ Duration: 1:30
 
 Para poder colocar una contraseña en el gestor de arranque debemos cifrar primero la contraseña con **sudo grub-mkpasswd-pbkdf2**.
 
-Ahora accedereos a **/etc/grub.d/40_custom**, una vez aquí dentro colocaremos lo siguiente
+Ahora accedereos a **/etc/grub.d/40_custom**, una vez aquí dentro colocaremos lo siguiente:
 ````
 set superusers="nombre-usuario"
 password_pbkdf2 nombre-usuario hash-password
 ````
-Para guarda los cambios tendremos que colocar el comando **update-grub**
+Para guarda los cambios tendremos que colocar el comando **update-grub**.
+
+Al arrancar de nuevo nos pedirá el usuario y su contraseña.
 
 ---
 
 ## **Crear una copia de seguridad de la configuración del arranque**
 
-Duration: 3:00
+Duration: 1:00
 
-
+Para realizar una realizar una copia de seguridad de la configuración del  grub2 hay que respaldar estos tres elementos:
+- Archivo /etc/default/grub
+- Directorio /etc/grub.d/ 
+- Archivo /boot/grub/grub.cfg 
 
 ---
 
@@ -73,3 +78,8 @@ Duration: 3:00
 
 Estas son otras formas de asegurar el arranque:
 
+- **Utilizar Secure Boot:** Esto ayuda a proteger el proceso de arranque y garantiza que solo el software firmado digitalmente por un fabricante de confianza se ejecute durante el arranque.
+
+- **Restricción de arranque desde dispositivos externos:** Restringir el arranque desde dispositivos externos como USB o CD/DVD. Esto previene posibles ataques que podrían comprometer GRUB a través de medios externos.
+
+- **Configuración de permisos de archivos:** Asegurar que los archivos de configuración relacionados con GRUB tengan los permisos adecuados. Restringe los permisos de lectura y escritura para los archivos de configuración de GRUB para evitar la manipulación no autorizada.
