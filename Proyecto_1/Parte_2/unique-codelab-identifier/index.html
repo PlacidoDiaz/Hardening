@@ -39,20 +39,22 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Entrar en la BIOS/UEFI" duration="2">
-        <h2 is-upgraded>¿Cómo acceder?</h2>
-<p>Lo primero que debemos hacer es buscar que tecla inicia la BIOS/UEFI de nuestro ordenador, aunque varía dependiendo del modelo de la tarjeta madre. Esto se hace usualmente presionando la tecla F2 o Supr. Presione la tecla adecuada hasta que aparezca el menú de configuración.</p>
-
-
-      </google-codelab-step>
-    
       <google-codelab-step label="Ocultar menú de arranque" duration="2">
-        
+        <p>Una vez dentro de la máquina deberemos editar el fichero <strong>/etc/default/grub</strong>. Para cambiar el tiempo de aparicion del gentor de arranque deberemos tocar el parámetro <strong>GRUB_TIMEOUT</strong></p>
+<p class="image-container"><img alt="GRUB" src="img\\a3c31f72c6c61f1e.JPG"></p>
+<p>Para guarda los cambios tendremos que colocar el comando <strong>update-grub</strong></p>
+
 
       </google-codelab-step>
     
       <google-codelab-step label="Configurar una contraseña modificar el arranque" duration="2">
-        
+        <p>Para poder colocar una contraseña en el gestor de arranque debemos cifrar primero la contraseña con <strong>sudo grub-mkpasswd-pbkdf2</strong>.</p>
+<p>Ahora accedereos a <strong>/etc/grub.d/40_custom</strong>, una vez aquí dentro colocaremos lo siguiente</p>
+<pre><code>set superusers=&#34;nombre-usuario&#34;
+password_pbkdf2 nombre-usuario hash-password
+</code></pre>
+<p>Para guarda los cambios tendremos que colocar el comando <strong>update-grub</strong></p>
+
 
       </google-codelab-step>
     

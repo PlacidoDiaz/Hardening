@@ -32,20 +32,15 @@ Este trabajo corresponde con una instalación de Debian 12.2.0
 
 ---
 
-## **Entrar en la BIOS/UEFI**
-
-Duration: 2:00
-
-### ¿Cómo acceder?
-Lo primero que debemos hacer es buscar que tecla inicia la BIOS/UEFI de nuestro ordenador, aunque varía dependiendo del modelo de la tarjeta madre. Esto se hace usualmente presionando la tecla F2 o Supr. Presione la tecla adecuada hasta que aparezca el menú de configuración.
-
----
-
 ## **Ocultar menú de arranque**
 
 Duration: 2:00
 
+Una vez dentro de la máquina deberemos editar el fichero **/etc/default/grub**. Para cambiar el tiempo de aparicion del gentor de arranque deberemos tocar el parámetro **GRUB_TIMEOUT**
 
+![GRUB](img/1.JPG)
+
+Para guarda los cambios tendremos que colocar el comando **update-grub**
 
 ---
 
@@ -53,6 +48,14 @@ Duration: 2:00
 
 Duration: 1:30
 
+Para poder colocar una contraseña en el gestor de arranque debemos cifrar primero la contraseña con **sudo grub-mkpasswd-pbkdf2**.
+
+Ahora accedereos a **/etc/grub.d/40_custom**, una vez aquí dentro colocaremos lo siguiente
+````
+set superusers="nombre-usuario"
+password_pbkdf2 nombre-usuario hash-password
+````
+Para guarda los cambios tendremos que colocar el comando **update-grub**
 
 ---
 
